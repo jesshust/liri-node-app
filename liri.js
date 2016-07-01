@@ -32,18 +32,14 @@ switch(action){
 		var parameters = {screen_name: 'jkbradford'}; 
 		
 		user.get('statuses/user_timeline', parameters, function (err, tweets, response) {
-				if (!error) {
-					console.log("My last 20 Tweets:"); 
-					console.log("");
 
 					for (var i = 0; i < 20; i++) {
 						console.log(tweets[i].text); 
 						console.log(tweets[i].created_at); 
 						console.log(""); 
+						console.log("My last 20 Tweets:"); 
+
 					} 
-				} else {
-						console.log(error); 
-				}
 
 		}); 
 	}	
